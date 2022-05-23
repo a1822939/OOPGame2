@@ -66,12 +66,14 @@ int Game::getInput(int range)
     while (invalidChoice)
     {
         choice = 0;
-        if (std::cin >> choice)
+        std::cin.clear();
+        std::cin >> choice; 
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+        if (choice > 0 && choice <= range)
         {
-            if (choice > 0 && choice <= range)
-            {
-                invalidChoice = false;
-            }
+            invalidChoice = false;
         }
         else
         {
@@ -81,6 +83,7 @@ int Game::getInput(int range)
             std::cout << "Enter integer between 1 and " << range << ": ";
         }
     }
+
     return choice;
 }
 
@@ -104,7 +107,6 @@ void Game::executeTurn(int p1MoveChoice, int p2MoveChoice)
         {
             moves[p2MoveChoice - 1]->executeMove(*currentPlayerPtrs[1], *currentPlayerPtrs[0]);
         }
-        
     }
     else
     {
@@ -118,7 +120,6 @@ void Game::executeTurn(int p1MoveChoice, int p2MoveChoice)
         {
             moves[p1MoveChoice - 1]->executeMove(*currentPlayerPtrs[0], *currentPlayerPtrs[1]);
         }
-        
     }
 
     delete[] moves;
