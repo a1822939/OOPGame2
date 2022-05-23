@@ -3,7 +3,7 @@
 
 #include "Move.h"
 
-class Heal : public Move
+class Heal : public Move //hi
 {
 private:
 public:

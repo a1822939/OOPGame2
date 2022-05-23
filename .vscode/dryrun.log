@@ -1,0 +1,8 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/tommyhick/Desktop/VS Code/Version 2/OOPGame2'
+git add -A 
+git commit -m "function working"
+git push
+git pull
+make: Leaving directory `/Users/tommyhick/Desktop/VS Code/Version 2/OOPGame2'
+ 

@@ -1,0 +1,1 @@
+{"buildTargets":["attack.o","character.o","clean","display.o","game.o","git","heal.o","main.o","output","player.o","run"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
