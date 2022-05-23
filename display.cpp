@@ -103,7 +103,8 @@ bool Display::displayCurrentStats(int p1MoveChoice, int p2MoveChoice)
     if (game->getPlayer(0)->getHP() == 0)
     {
         HUD();
-        std::cout << "\n" << game->getPlayer(1)->getPlayerName() << " wins!!!\n";
+        std::cout << "\n"
+                  << game->getPlayer(1)->getPlayerName() << " wins!!!\n";
         std::this_thread::sleep_for(std::chrono::milliseconds(2000));
         // displayCharacterStats() ;
         return 1;
@@ -111,7 +112,8 @@ bool Display::displayCurrentStats(int p1MoveChoice, int p2MoveChoice)
     else if (game->getPlayer(1)->getHP() == 0)
     {
         HUD();
-        std::cout << "\n" << game->getPlayer(0)->getPlayerName() << " wins!!!\n";
+        std::cout << "\n"
+                  << game->getPlayer(0)->getPlayerName() << " wins!!!\n";
         std::this_thread::sleep_for(std::chrono::milliseconds(2000));
         // displayCharacterStats() ;
         return 1;
@@ -170,8 +172,8 @@ void Display::HUD()
               << "/" << game->getPlayer(0)->getFullHP();
 
     std::cout << "\t" << game->getPlayer(1)->getPlayerName() << " HP: " << game->getPlayer(1)->getHP()
-                                                                      << "/" << game->getPlayer(1)->getFullHP()
-                                                                      << "\n\n";
+              << "/" << game->getPlayer(1)->getFullHP()
+              << "\n\n";
 }
 
 /*

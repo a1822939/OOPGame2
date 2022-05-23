@@ -8,7 +8,6 @@
 #include <chrono>
 #include <thread>
 
-
 int main()
 {
     // define character player list

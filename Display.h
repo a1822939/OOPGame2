@@ -21,9 +21,9 @@ public:
     bool displayCurrentStats(int p1MoveChoice, int p2MoveChoice); // Checks each player's health and declares a winner
     void menu();                                                  // Displays the main menu
     void fight();                                                 // Displays and initiates the fight sequence
-    //void displayPlayerMoves(int p1MoveChoice, int p2MoveChoice); 
-    void HUD();                                                   // Displays updated health bar of each player.
-    ~Display();                                                   // Destructor
+    // void displayPlayerMoves(int p1MoveChoice, int p2MoveChoice);
+    void HUD(); // Displays updated health bar of each player.
+    ~Display(); // Destructor
 };
 
 #endif

@@ -1,17 +1,19 @@
 #include "Player.h"
 
-//Default player constructor
-Player::Player(){
+// Default player constructor
+Player::Player()
+{
     playerName = "default";
 }
 
-Player::Player(std::string name){
+Player::Player(std::string name)
+{
     playerName = name;
 }
-//Set functions for player objects
+// Set functions for player objects
 void Player::setSpeed(int speed) { this->speed = speed; }
 void Player::setStrength(int strength) { this->strength = strength; }
-void Player::setHP(int hp) { this->hp = hp;}
+void Player::setHP(int hp) { this->hp = hp; }
 
 //
 void Player::applyCharacter(Character character)
@@ -22,9 +24,10 @@ void Player::applyCharacter(Character character)
     this->full_hp = character.getHP();
 }
 
-void Player::setPlayerName(std::string name){playerName = name;}
+void Player::setPlayerName(std::string name) { playerName = name; }
 
-std::string Player::getPlayerName(){
+std::string Player::getPlayerName()
+{
     return playerName;
 }
 
