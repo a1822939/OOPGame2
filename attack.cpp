@@ -7,7 +7,8 @@
 
 void Attack::executeMove(Player &attackingPlayer, Player &victim)
 {
-    double attackMultiplier = (1.3 -0.7) * ( (double)rand() / (double)RAND_MAX ) + 0.7;
+    //double attackMultiplier = (1.3 -0.7) * ( (double)rand() / (double)RAND_MAX ) + 0.7;
+    double attackMultiplier = 1;
     int victimNewHP = victim.getHP() - round(attackingPlayer.getStrength() * attackMultiplier);
 
     if (victimNewHP < 0)

@@ -21,7 +21,7 @@ public:
 
     void setStrength(int strength);       // initialises the value of strength
     void setSpeed(int speed);             // initialises the value of speed
-    void setHP(int hp);                   // initialises the value of strength
+    void setHP(int hp);                   // initialises the value of HP
     void setPlayerName(std::string name); // Sets the name of the player to playerName
 
     void applyCharacter(Character character); // initialises a player object by taking in a character type
