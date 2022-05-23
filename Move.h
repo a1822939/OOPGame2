@@ -6,9 +6,8 @@
 #include "Player.h"
 
 /*
-Abstract class for move types, with derived classes including
-healing and attacking. Allows for future implementation of
-additional move types.
+Abstract class for move types, with derived classes including healing and attacking. 
+Allows for future implementation of additional move types.
 */
 
 class Move

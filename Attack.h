@@ -11,7 +11,7 @@ class Attack : public Move
 {
 private:
 public:
-    void executeMove(Player &player1, Player &player2); // overriding executeMove function for attack class
+    void executeMove(Player &player1, Player &player2); // overriding executeMove function for to perform attack
 };
 
 #endif

@@ -21,6 +21,16 @@ heal.o: heal.cpp heal.h move.h
 player.o: player.cpp player.h
 	g++ -c player.cpp
 
+test-player: player.o test.cpp
+	g++ test.cpp player.o
+
+test-heal: heal.o .cpp
+	g++ heal.o test1.cpp
+
+test: 
+	test-player
+	test-heal
+
 clean:
 	rm *.o output
 
