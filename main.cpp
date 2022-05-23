@@ -15,7 +15,7 @@ int main()
     defaultCharacters.push_back(Character("Dwarf", 300, 10, 50));
     defaultCharacters.push_back(Character("Giant", 100, 40, 20));
     defaultCharacters.push_back(Character("Snake", 200, 90, 30));
-    defaultCharacters.push_back(Character("Viking", 350, 30, 50));
+    defaultCharacters.push_back(Character("Viking", 320, 30, 50));
 
     Game game(defaultCharacters);
 
