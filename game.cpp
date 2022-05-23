@@ -66,11 +66,12 @@ int Game::getInput(int range)
     while (invalidChoice)
     {
         choice = 0;
-        if (std::cin >> choice){
-        if (choice > 0 && choice <= range)
+        if (std::cin >> choice)
         {
-            invalidChoice = false;
-        }
+            if (choice > 0 && choice <= range)
+            {
+                invalidChoice = false;
+            }
         }
         else
         {
@@ -86,50 +87,41 @@ int Game::getInput(int range)
 void Game::executeTurn(int p1MoveChoice, int p2MoveChoice)
 {
     // instanitate attack and heal objects
-    Move* attack moves[2]= new Attack;
+    Attack attack;
     Heal heal;
+    Move **moves = new Move *[2];
+    moves[0] = &attack;
+    moves[1] = &heal;
 
     if (currentPlayerPtrs[0]->getSpeed() >= currentPlayerPtrs[1]->getSpeed())
     {
-        system("clear");
-        if (p1MoveChoice == 1)
+        moves[p1MoveChoice - 1]->executeMove(*currentPlayerPtrs[0], *currentPlayerPtrs[1]);
+        if (currentPlayerPtrs[1]->getHP() == 0)
         {
-            attack.executeMove(*currentPlayerPtrs[0], *currentPlayerPtrs[1]);
+            return;
         }
         else
         {
-            heal.executeMove(*currentPlayerPtrs[0], *currentPlayerPtrs[1]);
+            moves[p2MoveChoice - 1]->executeMove(*currentPlayerPtrs[1], *currentPlayerPtrs[0]);
         }
-
-        if (p2MoveChoice == 1)
-        {
-            attack.executeMove(*currentPlayerPtrs[1], *currentPlayerPtrs[0]);
-        }
-        else
-        {
-            heal.executeMove(*currentPlayerPtrs[1], *currentPlayerPtrs[0]);
-        }
+        
     }
     else
     {
-        if (p2MoveChoice == 1)
-        {
-            attack.executeMove(*currentPlayerPtrs[1], *currentPlayerPtrs[0]);
-        }
-        else
-        {
-            heal.executeMove(*currentPlayerPtrs[1], *currentPlayerPtrs[0]);
-        }
+        moves[p2MoveChoice - 1]->executeMove(*currentPlayerPtrs[1], *currentPlayerPtrs[0]);
 
-        if (p1MoveChoice == 1)
+        if (currentPlayerPtrs[0]->getHP() == 0)
         {
-            attack.executeMove(*currentPlayerPtrs[0], *currentPlayerPtrs[1]);
+            return;
         }
         else
         {
-            heal.executeMove(*currentPlayerPtrs[0], *currentPlayerPtrs[1]);
+            moves[p1MoveChoice - 1]->executeMove(*currentPlayerPtrs[0], *currentPlayerPtrs[1]);
         }
+        
     }
+
+    delete[] moves;
 }
 
 Game::~Game() {}

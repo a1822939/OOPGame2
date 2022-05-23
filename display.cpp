@@ -160,7 +160,6 @@ void Display::fight()
 
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
-    menu();
 }
 
 void Display::HUD()
@@ -175,30 +174,6 @@ void Display::HUD()
               << "/" << game->getPlayer(1)->getFullHP()
               << "\n\n";
 }
-
-/*
-void Display::displayPlayerMoves(int p1MoveChoice, int p2MoveChoice)
-{
-    if (p1MoveChoice == 1)
-    {
-        std::cout << game->getPlayer(0)->getPlayerName() <<" attacked " << game->getPlayer(1)->getPlayerName() << std::endl;
-    }
-    else
-    {
-
-        std::cout <<  game->getPlayer(0)->getPlayerName() << "healed themselves!" << std::endl;
-    }
-
-    if (p2MoveChoice == 1)
-    {
-        std::cout << game->getPlayer(1)->getPlayerName() <<" attacked " << game->getPlayer(0)->getPlayerName() << std::endl;
-    }
-    else
-    {
-        std::cout << game->getPlayer(1)->getPlayerName() << " healed themselves!" << std::endl;
-    }
-}
-*/
 
 Display::~Display()
 {
