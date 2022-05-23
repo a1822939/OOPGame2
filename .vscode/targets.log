@@ -6,11 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Mon May 23 12:15:39 2022
+# Make data base, printed on Mon May 23 12:42:12 2022
 
 # Variables
 
@@ -41,7 +38,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/g6/8chvs7hj0tv1fqq515k1dm480000gn/T/vscode-ipc-0893a1a4-6e26-4331-8285-b3d086101ecb.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/g6/8chvs7hj0tv1fqq515k1dm480000gn/T/vscode-ipc-f3c927cc-8ee0-4d54-8fef-5c042ef26711.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -145,9 +142,9 @@ VSCODE_PID = 27038
 
 # Directories
 
-# . (device 16777231, inode 13018675): 20 files, no impossibilities.
+# . (device 16777231, inode 13018675): 28 files, no impossibilities.
 
-# 20 files, no impossibilities in 1 directories.
+# 28 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -340,6 +337,9 @@ clean:
 game.o: game.cpp game.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+ 
+make: *** No rule to make target `all'.  Stop.
+
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 18):
 	g++ -c game.cpp
@@ -350,7 +350,6 @@ display.o: display.cpp display.h
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 16):
- 
 	g++ -c display.cpp
 	
 
@@ -411,6 +410,6 @@ player.o: player.cpp player.h
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon May 23 12:15:39 2022
+# Finished Make data base on Mon May 23 12:42:12 2022
 
  

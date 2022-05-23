@@ -66,10 +66,11 @@ int Game::getInput(int range)
     while (invalidChoice)
     {
         choice = 0;
-        std::cin >> choice;
+        if (std::cin >> choice){
         if (choice > 0 && choice <= range)
         {
             invalidChoice = false;
+        }
         }
         else
         {
@@ -85,7 +86,7 @@ int Game::getInput(int range)
 void Game::executeTurn(int p1MoveChoice, int p2MoveChoice)
 {
     // instanitate attack and heal objects
-    Attack attack;
+    Move* attack moves[2]= new Attack;
     Heal heal;
 
     if (currentPlayerPtrs[0]->getSpeed() >= currentPlayerPtrs[1]->getSpeed())

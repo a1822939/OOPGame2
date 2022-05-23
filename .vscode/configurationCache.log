@@ -1,1 +1,1 @@
-{"buildTargets":["attack.o","character.o","clean","display.o","game.o","git","heal.o","main.o","output","player.o","run","test","test-heal","test-player"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
+{"buildTargets":["attack.o","character.o","clean","display.o","game.o","git","heal.o","main.o","make","output","player.o","run","test","test-heal","test-player"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
