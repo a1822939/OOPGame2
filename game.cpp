@@ -62,27 +62,33 @@ Player *Game::getPlayer(int index) { return currentPlayerPtrs[index]; }
 int Game::getInput(int range)
 {
     bool invalidChoice = true;
-    std::cout << "Enter integer between 1 and " << range << ": ";
-    while (invalidChoice)
-    {
-        choice = 0;
-        std::cin.clear();
-        std::cin >> choice; 
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    do {
+        std::cout << "Enter integer between 1 and " << range << ": ";
+
+        if (!(std::cin >> choice))
+        {
+            std::cout << "Please enter a number only." << std::endl;
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
+        else{
 
         if (choice > 0 && choice <= range)
         {
             invalidChoice = false;
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
         else
         {
+            std::cout << "Invalid number." << std::endl;
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "Invalid Input" << std::endl;
-            std::cout << "Enter integer between 1 and " << range << ": ";
+        }
         }
     }
+    while(invalidChoice);
 
     return choice;
 }
