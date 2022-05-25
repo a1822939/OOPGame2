@@ -144,6 +144,7 @@ void Display::fight()
 
     while (GameOver == 0)
     {
+        //
         std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
         std::cout << "Choose move for " << game->getPlayer(0)->getPlayerName() << ": \n"
