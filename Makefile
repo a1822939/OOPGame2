@@ -4,7 +4,9 @@ git:
 	git push
 	git pull
 
-output: main.o attack.o character.o display.o game.o heal.o player.o
+
+
+output: main.o attack.o character.o display.o game.o heal.o player.o test
 	g++ main.o attack.o character.o display.o game.o heal.o player.o -o output
 main.o: main.cpp
 	g++ -c main.cpp
@@ -21,15 +23,18 @@ heal.o: heal.cpp heal.h move.h
 player.o: player.cpp player.h
 	g++ -c player.cpp
 
-test-player: player.o test.cpp
-	g++ test.cpp player.o
 
-test-heal: heal.o .cpp
-	g++ heal.o test1.cpp
 
-test: 
-	test-player
-	test-heal
+test-heal: unit_Test2-Heal.cpp heal.cpp Heal.h player.cpp character.cpp player.h character.h
+	g++ unit_Test2-Heal.cpp heal.cpp player.cpp character.cpp -std=c++14 -o test-heal
+
+test-attack: unit_Test1-Attack.cpp attack.cpp Attack.h player.cpp character.cpp player.h character.h
+	g++ unit_Test1-Attack.cpp attack.cpp player.cpp character.cpp -std=c++14 -o test-attack
+
+test: test-heal test-attack
+	./test-heal
+	./test-attack
+
 
 clean:
 	rm *.o output

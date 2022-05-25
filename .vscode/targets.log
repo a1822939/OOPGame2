@@ -6,11 +6,15 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `all'.  Stop.
 
-# Make data base, printed on Mon May 23 12:42:12 2022
+
+# Make data base, printed on Tue May 24 14:22:24 2022
 
 # Variables
 
+ 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
@@ -24,7 +28,7 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /Users/josh/Documents/2022/sem1/oop/OOPGame2
+CURDIR := /Users/tommyhick/Desktop/VS Code/USE THIS/OOPGame2
 # makefile
 SHELL = /bin/sh
 # environment
@@ -38,11 +42,11 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/g6/8chvs7hj0tv1fqq515k1dm480000gn/T/vscode-ipc-f3c927cc-8ee0-4d54-8fef-5c042ef26711.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/c0/j447k96s3ws73rhxs9rwtfrw0000gn/T/vscode-ipc-7b54e432-1b2d-49b4-9a2f-7654be072888.sock
 # environment
 VSCODE_CWD = /
 # environment
-PATH = /Library/Frameworks/Python.framework/Versions/3.10/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -50,25 +54,25 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.6jA3zg5c2f/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.HhiAuRDJEz/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /Users/josh/Documents/2022/sem1/oop/OOPGame2
+PWD = /Users/tommyhick/Desktop/VS Code/USE THIS/OOPGame2
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-HOME = /Users/josh
+HOME = /Users/tommyhick
 # default
-MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
+MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/josh/Library/Application Support/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+VSCODE_CODE_CACHE_PATH = /Users/tommyhick/Library/Application Support/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
-LOGNAME = josh
+LOGNAME = tommyhick
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
@@ -86,21 +90,21 @@ SHLVL = 1
 # default
 MAKE_VERSION := 3.81
 # environment
-USER = josh
+USER = tommyhick
 # makefile
 .DEFAULT_GOAL := git
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
-MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
+MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
 # default
 .VARIABLES := 
 # environment
-TMPDIR = /var/folders/g6/8chvs7hj0tv1fqq515k1dm480000gn/T/
+TMPDIR = /var/folders/c0/j447k96s3ws73rhxs9rwtfrw0000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/josh/Library/Application Support/Code/1.67.2-main.sock
+VSCODE_IPC_HOOK = /Users/tommyhick/Library/Application Support/Code/1.67.2-main.sock
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -108,7 +112,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.12726447.12726453
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.37790602.37790608
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -132,7 +136,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 27038
+VSCODE_PID = 2336
 # variable set hash-table stats:
 # Load=61/1024=6%, Rehash=0, Collisions=1/84=1%
 
@@ -142,9 +146,9 @@ VSCODE_PID = 27038
 
 # Directories
 
-# . (device 16777231, inode 13018675): 28 files, no impossibilities.
+# . (device 16777234, inode 38399074): 34 files, no impossibilities.
 
-# 28 files, no impossibilities in 1 directories.
+# 34 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -152,16 +156,17 @@ VSCODE_PID = 27038
 
 # Files
 
-test-heal: heal.o .cpp
+test-heal: unit_Test2-Heal.cpp heal.cpp Heal.h player.cpp character.cpp player.h character.h
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 28):
-	g++ heal.o test1.cpp
+#  commands to execute (from `Makefile', line 29):
+	g++ unit_Test2-Heal.cpp heal.cpp player.cpp character.cpp -std=c++14 -o test-heal
 	
 
 # Not a target:
-heal.h:
+Heal.h:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -176,7 +181,20 @@ all:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
+ 
 heal.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+unit_Test1-Attack.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+unit_Test2-Heal.cpp:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -199,14 +217,6 @@ display.h:
 #  Modification time never checked.
 #  File has not been updated.
 
-test-player: player.o test.cpp
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `Makefile', line 25):
-	g++ test.cpp player.o
-	
-
 git:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -227,7 +237,8 @@ git:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-23 12:15:35
+ 
+#  Last modified 2022-05-24 14:22:18
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -245,13 +256,13 @@ display.cpp:
 #  Modification time never checked.
 #  File has not been updated.
 
-test:
+test: test-heal test-attack
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 31):
-	test-player
-	test-heal
+#  commands to execute (from `Makefile', line 35):
+	./test-heal
+	./test-attack
 	
 
 # Not a target:
@@ -260,11 +271,17 @@ main.cpp:
 #  Modification time never checked.
 #  File has not been updated.
 
+# Not a target:
+Attack.h:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 attack.o: attack.cpp attack.h move.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 12):
+#  commands to execute (from `Makefile', line 14):
 	g++ -c attack.cpp
 	
 
@@ -296,7 +313,7 @@ heal.o: heal.cpp heal.h move.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 20):
+#  commands to execute (from `Makefile', line 22):
 	g++ -c heal.cpp
 	
 
@@ -316,32 +333,23 @@ run:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 38):
+#  commands to execute (from `Makefile', line 43):
 	g++ character.cpp player.cpp display.cpp game.cpp main.cpp attack.cpp heal.cpp
 	
-
-# Not a target:
-.cpp:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
 
 clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 35):
+#  commands to execute (from `Makefile', line 40):
 	rm *.o output
 	
 
 game.o: game.cpp game.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
-make: *** No rule to make target `all'.  Stop.
-
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 18):
+#  commands to execute (from `Makefile', line 20):
 	g++ -c game.cpp
 	
 
@@ -349,7 +357,7 @@ display.o: display.cpp display.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 16):
+#  commands to execute (from `Makefile', line 18):
 	g++ -c display.cpp
 	
 
@@ -357,20 +365,28 @@ main.o: main.cpp
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 10):
+#  commands to execute (from `Makefile', line 12):
 	g++ -c main.cpp
 	
 
-output: main.o attack.o character.o display.o game.o heal.o player.o
+test-attack: unit_Test1-Attack.cpp attack.cpp Attack.h player.cpp character.cpp player.h character.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 8):
+#  commands to execute (from `Makefile', line 32):
+	g++ unit_Test1-Attack.cpp attack.cpp player.cpp character.cpp -std=c++14 -o test-attack
+	
+
+output: main.o attack.o character.o display.o game.o heal.o player.o test
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 10):
 	g++ main.o attack.o character.o display.o game.o heal.o player.o -o output
 	
 
 # Not a target:
-test.cpp:
+heal.h:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -385,7 +401,7 @@ character.o: character.cpp character.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 14):
+#  commands to execute (from `Makefile', line 16):
 	g++ -c character.cpp
 	
 
@@ -393,12 +409,12 @@ player.o: player.cpp player.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 22):
+#  commands to execute (from `Makefile', line 24):
 	g++ -c player.cpp
 	
 
 # files hash-table stats:
-# Load=34/1024=3%, Rehash=0, Collisions=2/72=3%
+# Load=36/1024=4%, Rehash=0, Collisions=7/87=8%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -410,6 +426,6 @@ player.o: player.cpp player.h
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon May 23 12:42:12 2022
+# Finished Make data base on Tue May 24 14:22:24 2022
 
  
