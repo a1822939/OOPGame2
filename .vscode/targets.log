@@ -10,13 +10,13 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Tue May 24 14:22:24 2022
+# Make data base, printed on Wed May 25 14:16:22 2022
 
 # Variables
 
- 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
+ 
 # automatic
 ?F = $(notdir $?)
 # environment
@@ -28,7 +28,7 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /Users/tommyhick/Desktop/VS Code/USE THIS/OOPGame2
+CURDIR := /Users/josh/Documents/2022/sem1/oop/OOPGame2
 # makefile
 SHELL = /bin/sh
 # environment
@@ -42,11 +42,11 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/c0/j447k96s3ws73rhxs9rwtfrw0000gn/T/vscode-ipc-7b54e432-1b2d-49b4-9a2f-7654be072888.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/g6/8chvs7hj0tv1fqq515k1dm480000gn/T/vscode-ipc-7d967dca-5801-4f88-83e0-7450a0b9b6a0.sock
 # environment
 VSCODE_CWD = /
 # environment
-PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
+PATH = /Library/Frameworks/Python.framework/Versions/3.10/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -54,25 +54,25 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.HhiAuRDJEz/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.6jA3zg5c2f/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /Users/tommyhick/Desktop/VS Code/USE THIS/OOPGame2
+PWD = /Users/josh/Documents/2022/sem1/oop/OOPGame2
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-HOME = /Users/tommyhick
+HOME = /Users/josh
 # default
-MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/tommyhick/Library/Application Support/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+VSCODE_CODE_CACHE_PATH = /Users/josh/Library/Application Support/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
-LOGNAME = tommyhick
+LOGNAME = josh
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
@@ -85,26 +85,27 @@ XPC_FLAGS = 0x0
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
+ 
 # environment
 SHLVL = 1
 # default
 MAKE_VERSION := 3.81
 # environment
-USER = tommyhick
+USER = josh
 # makefile
 .DEFAULT_GOAL := git
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
-MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
 .VARIABLES := 
 # environment
-TMPDIR = /var/folders/c0/j447k96s3ws73rhxs9rwtfrw0000gn/T/
+TMPDIR = /var/folders/g6/8chvs7hj0tv1fqq515k1dm480000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/tommyhick/Library/Application Support/Code/1.67.2-main.sock
+VSCODE_IPC_HOOK = /Users/josh/Library/Application Support/Code/1.67.2-main.sock
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -112,7 +113,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.37790602.37790608
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.12726447.12726453
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -136,7 +137,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 2336
+VSCODE_PID = 33402
 # variable set hash-table stats:
 # Load=61/1024=6%, Rehash=0, Collisions=1/84=1%
 
@@ -146,9 +147,9 @@ VSCODE_PID = 2336
 
 # Directories
 
-# . (device 16777234, inode 38399074): 34 files, no impossibilities.
+# . (device 16777231, inode 13018675): 33 files, no impossibilities.
 
-# 34 files, no impossibilities in 1 directories.
+# 33 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -157,7 +158,6 @@ VSCODE_PID = 2336
 # Files
 
 test-heal: unit_Test2-Heal.cpp heal.cpp Heal.h player.cpp character.cpp player.h character.h
- 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -165,6 +165,7 @@ test-heal: unit_Test2-Heal.cpp heal.cpp Heal.h player.cpp character.cpp player.h
 	g++ unit_Test2-Heal.cpp heal.cpp player.cpp character.cpp -std=c++14 -o test-heal
 	
 
+ 
 # Not a target:
 Heal.h:
 #  Implicit rule search has not been done.
@@ -181,7 +182,6 @@ all:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
- 
 heal.cpp:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -237,8 +237,7 @@ git:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
- 
-#  Last modified 2022-05-24 14:22:18
+#  Last modified 2022-05-25 14:14:12
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -366,6 +365,7 @@ main.o: main.cpp
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 12):
+ 
 	g++ -c main.cpp
 	
 
@@ -377,7 +377,7 @@ test-attack: unit_Test1-Attack.cpp attack.cpp Attack.h player.cpp character.cpp 
 	g++ unit_Test1-Attack.cpp attack.cpp player.cpp character.cpp -std=c++14 -o test-attack
 	
 
-output: main.o attack.o character.o display.o game.o heal.o player.o test
+output: main.o attack.o character.o display.o game.o heal.o player.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -414,7 +414,7 @@ player.o: player.cpp player.h
 	
 
 # files hash-table stats:
-# Load=36/1024=4%, Rehash=0, Collisions=7/87=8%
+# Load=36/1024=4%, Rehash=0, Collisions=7/86=8%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -426,6 +426,6 @@ player.o: player.cpp player.h
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Tue May 24 14:22:24 2022
+# Finished Make data base on Wed May 25 14:16:22 2022
 
  

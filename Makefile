@@ -6,7 +6,7 @@ git:
 
 
 
-output: main.o attack.o character.o display.o game.o heal.o player.o test
+output: main.o attack.o character.o display.o game.o heal.o player.o
 	g++ main.o attack.o character.o display.o game.o heal.o player.o -o output
 main.o: main.cpp
 	g++ -c main.cpp

@@ -1,9 +1,9 @@
 make --dry-run --keep-going --print-directory
-make: Entering directory `/Users/tommyhick/Desktop/VS Code/USE THIS/OOPGame2'
+make: Entering directory `/Users/josh/Documents/2022/sem1/oop/OOPGame2'
 git add -A 
 git commit -m "function working"
 git push
 git pull
  
-make: Leaving directory `/Users/tommyhick/Desktop/VS Code/USE THIS/OOPGame2'
+make: Leaving directory `/Users/josh/Documents/2022/sem1/oop/OOPGame2'
  
