@@ -14,6 +14,7 @@ Display::Display(Game *game) { this->game = game; }
 // Displays the main menu
 void Display::menu()
 {
+    //Displays the opening title screen for user
     system("clear");
     std::cout << "Welcome to Mortal OOPbat! \n";
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
@@ -45,6 +46,7 @@ void Display::menu()
 void Display::characterSelection()
 {
 
+    //Asks user for their name
     game->inputPlayerNames();
 
     system("clear");
@@ -53,16 +55,16 @@ void Display::characterSelection()
               << "\n"
               << std::endl;
 
-    displayCharacterStats();
+    displayCharacterStats(); //Displays the current list of characters avaliable for the user
 
-    int index = game->getInput(game->getNumCharacters()) - 1;
-    game->getPlayer(0)->applyCharacter(game->getCharacter(index));
+    int index = game->getInput(game->getNumCharacters()) - 1; // initialises index by requesting input from user
+    game->getPlayer(0)->applyCharacter(game->getCharacter(index)); // applies the chosen character to the first player
     system("clear");
 
     std::cout << game->getPlayer(0)->getPlayerName() << " has chosen " << game->getCharacter(index).getName() << "\n"
               << std::endl;
 
-    game->deleteCharacter(index);
+    game->deleteCharacter(index); // removes chosen character from list
 
     std::this_thread::sleep_for(std::chrono::milliseconds(2000));
 
@@ -70,16 +72,16 @@ void Display::characterSelection()
               << "\n"
               << std::endl;
 
-    displayCharacterStats();
+    displayCharacterStats(); //Displays the current list of characters avaliable for the user
 
     index = game->getInput(game->getNumCharacters()) - 1;
-    game->getPlayer(1)->applyCharacter(game->getCharacter(index));
+    game->getPlayer(1)->applyCharacter(game->getCharacter(index)); // applies the chosen character to the second player
     system("clear");
 
     std::cout << game->getPlayer(1)->getPlayerName() << " has chosen " << game->getCharacter(index).getName() << "\n"
               << std::endl;
 
-    game->deleteCharacter(index);
+    game->deleteCharacter(index); // removes chosen character from list
 
     std::this_thread::sleep_for(std::chrono::milliseconds(2000));
 
@@ -92,7 +94,7 @@ void Display::characterSelection()
 // Displays the stats of each character
 void Display::displayCharacterStats()
 {
-    for (int i = 0; i < game->getNumCharacters(); i++)
+    for (int i = 0; i < game->getNumCharacters(); i++) // loops through number of characters 
     {
         std::cout << i + 1 << ". " << game->getCharacter(i).getName() << std::endl;
         std::cout << "\tHP:\t\t" << game->getCharacter(i).getHP() << std::endl;
@@ -113,7 +115,7 @@ bool Display::displayCurrentStats(int p1MoveChoice, int p2MoveChoice)
         std::cout << "\n"
                   << game->getPlayer(1)->getPlayerName() << " wins!!!\n";
         std::this_thread::sleep_for(std::chrono::milliseconds(2000));
-        // displayCharacterStats() ;
+
         return 1;
     }
     else if (game->getPlayer(1)->getHP() == 0)
@@ -122,12 +124,12 @@ bool Display::displayCurrentStats(int p1MoveChoice, int p2MoveChoice)
         std::cout << "\n"
                   << game->getPlayer(0)->getPlayerName() << " wins!!!\n";
         std::this_thread::sleep_for(std::chrono::milliseconds(2000));
-        // displayCharacterStats() ;
+
         return 1;
     }
     else
     {
-        // displayPlayerMoves(p1MoveChoice, p2MoveChoice);
+
         HUD();
 
         return 0;
@@ -143,8 +145,6 @@ void Display::fight()
     while (GameOver == 0)
     {
         std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-
-        // HUD();
 
         std::cout << "Choose move for " << game->getPlayer(0)->getPlayerName() << ": \n"
                   << "1. Attack\n"
