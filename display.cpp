@@ -4,10 +4,14 @@
 #include <chrono>
 #include <thread>
 
+
+// Default constructor for display
 Display::Display() {}
 
+// Constructor allowing use of game functions
 Display::Display(Game *game) { this->game = game; }
 
+// Displays the main menu
 void Display::menu()
 {
     system("clear");
@@ -37,6 +41,7 @@ void Display::menu()
     }
 }
 
+// Displays the character options to each player
 void Display::characterSelection()
 {
 
@@ -84,6 +89,7 @@ void Display::characterSelection()
     fight();
 }
 
+// Displays the stats of each character
 void Display::displayCharacterStats()
 {
     for (int i = 0; i < game->getNumCharacters(); i++)
@@ -96,6 +102,7 @@ void Display::displayCharacterStats()
     }
 }
 
+// Checks each player's health and declares a winner
 bool Display::displayCurrentStats(int p1MoveChoice, int p2MoveChoice)
 {
     system("clear");
@@ -127,6 +134,7 @@ bool Display::displayCurrentStats(int p1MoveChoice, int p2MoveChoice)
     }
 }
 
+// Displays and initiates the fight sequence
 void Display::fight()
 {
 
@@ -162,6 +170,7 @@ void Display::fight()
 
 }
 
+// Displays updated health bar of each player.
 void Display::HUD()
 {
 
@@ -175,6 +184,7 @@ void Display::HUD()
               << "\n\n";
 }
 
+// Destructor
 Display::~Display()
 {
 }

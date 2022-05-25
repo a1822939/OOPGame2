@@ -9,6 +9,7 @@
 
 using namespace std;
 
+// create pair of player objects to insert into heal function
 std::pair<Player, Player> testSetUp()
 {
 

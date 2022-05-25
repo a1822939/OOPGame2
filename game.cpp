@@ -19,30 +19,30 @@ Game::Game(){};
 
 void Game::addCharacter(Character newCharacter)
 {
-    characterList.push_back(newCharacter);
+    characterList.push_back(newCharacter); // adds new character to end of list
 }
 
 void Game::deleteCharacter(int index)
 {
-    characterList.erase(characterList.begin() + index);
+    characterList.erase(characterList.begin() + index); // erases character in given index
 }
 
 void Game::inputPlayerNames()
 {
     system("clear");
 
-    std::string input;
+    std::string input; // initialises input variable
     std::cout << "Enter player one name: ";
-    std::cin >> input;
+    std::cin >> input; // requests user input
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // ignores spacing so only first word entered is used
 
     player1.setPlayerName(input);
 
     system("clear");
 
     std::cout << "Enter player two name: ";
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    std::cin >> input;
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cin >> input; // requests user input
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // ignores spacing so only first word entered is used
 
     player2.setPlayerName(input);
 }
@@ -59,9 +59,10 @@ Character Game::getCharacter(int index) { return characterList[index]; }
 
 Player *Game::getPlayer(int index) { return currentPlayerPtrs[index]; }
 
-int Game::getInput(int range)
+int Game::getInput(int range) // gets valid user input with number of selections as parameter
+
 {
-    bool invalidChoice = true;
+    bool invalidChoice = true; // initialise invalid choice as true
 
     do {
         std::cout << "Enter integer between 1 and " << range << ": ";
